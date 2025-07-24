@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+      <script>
+  window.pixelId = "67edf4c3c10671e61577006d";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/favi.webp" type="image/png" />
+    <title>Ajude a MaJu</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/glide.core.min.css" />
+    <link rel="stylesheet" href="css/glide.theme.min.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <script src="js/qrcode.min.js"></script>
+  </head>
+<script>
+  // Parâmetros que você quer passar adiante
+  const paramsToKeep = [
+    "utm_source",
+    "utm_campaign",
+    "utm_medium",
+    "utm_content",
+    "utm_term",
+    "xcod"
+  ];
+
+  function getCurrentParams() {
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    const result = {};
+    paramsToKeep.forEach(param => {
+      const value = urlSearchParams.get(param);
+      if (value) result[param] = value;
+    });
+    return result;
+  }
+
+  function buildQueryString(params) {
+    return Object.entries(params)
+      .map(([key, val]) => `${encodeURIComponent(key)}=${encodeURIComponent(val)}`)
+      .join("&");
+  }
+
+  function updateInternalLinks() {
+    const links = document.querySelectorAll("a[href]");
+    const currentParams = getCurrentParams();
+    if (Object.keys(currentParams).length === 0) return;
+
+    links.forEach(link => {
+      const href = link.getAttribute("href");
+
+      // Só aplica em links relativos (ou seja, dentro do site)
+      if (href.startsWith("/") || href.startsWith(window.location.origin)) {
+        const url = new URL(href, window.location.origin);
+        const linkParams = new URLSearchParams(url.search);
+
+        // Adiciona os parâmetros desejados
+        for (const key in currentParams) {
+          linkParams.set(key, currentParams[key]);
+        }
+
+        url.search = linkParams.toString();
+        link.setAttribute("href", url.pathname + url.search);
+      }
+    });
+  }
+
+  // Quando a página carregar, atualiza os links
+  document.addEventListener("DOMContentLoaded", updateInternalLinks);
+</script>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <a>
+            <img src="images/ajudelogo.png" />
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div class="post">
+      <h3>
+        Ajude a Maria Júlia - Cirurgia para Fenda Labial 🙏💜
+      </h3>
+      <img src="images/maju1.png" />
+      <div class="image-container">
+        <div class="likes-container">
+          <img src="images/boll.png" alt="Corações" />
+          <span>89 corações recebidos ❤️</span>
+        </div>
+      </div>
+      <a href="#button-section" class="btn-anchor">
+        <button class="post-button3">DOAR AGORA</button>
+      </a>
+      <div class="Maria Júlia-story">
+        <p>Eles apontam. Sussurram. Chamam de "castigo".
+
+Dizem que Maria Júlia "não deveria sair de casa pra não assustar outras crianças".
+
+Ela tem 3 anos e 4 meses e já conhece o peso da rejeição. Já sabe o que é olhar no espelho e perguntar pra mãe com a vozinha abafada:  "Mamãe… será que um dia eu vou ter uma boca igual a das bonecas?"
+</p>
+        <p>Maria Júlia nasceu com uma fenda labial e palatina bilateral completa – uma abertura que vai do lábio até o céu da boca.</p>
+
+        <p>💔 <strong>O QUE A FENDA CAUSA NA MARIA JÚLIA:</strong><br>
+        • Não consegue falar direito<br>- as palavras saem abafadas e distorcidas
+        •  Engasga com quase tudo que tenta comer<br>- é um sofrimento a cada refeição
+        • Vive com uma dor constante <br> -que nenhuma criança deveria sentir
+        • Sofre preconceito e rejeição <br>outras crianças não chegam perto
+      </p> 
+        <p><strong>Desde bebê, cada refeição foi uma batalha.</strong>
+        </p>
+        <p>👨‍👩‍👦 O leite escorria pelo nariz e ela se engasgava a ponto de ficar roxa<strong>Teve pneumonia duas vezes antes de completar 1 ano.</strong><br> </p>
+         <p>💔 O PAI ABANDONOU A FAMÍLIA </p>
+          <p>
+        O pai? Foi embora. </p>
+         <p>   
+
+Quando viu o rostinho dela no hospital, ficou em silêncio, pegou o celular e nunca mais voltou. Bloqueou o número da Camila e abandonou mãe e filha sem olhar pra trás.
+
+"Eu implorava: 'Pelo menos manda o dinheiro do leite especial dela…' ela nunca respondeu." - Camila</p>
+<p>   
+
+🏚️ DESPEJADAS E SEM CASA </p>
+ <p>
+No mês passado, Camila foi despejada. A dona da casa disse que não podia mais esperar o aluguel atrasado.
+ </p>
+  <p>
+Ela e Maria Júlia passaram duas noites dormindo no chão da cozinha de uma vizinha até conseguirem se mudar pra um quartinho minúsculo nos fundos de um barraco, com goteira e cheiro de mofo.</p>
+        <p>"Eu chorava escondido. Maria Júlia me abraçou e disse: 'Não fica triste, mamãe. Eu não ligo de morar aqui… só queria uma boca bonita pra eu poder sorrir.'" - Camila </p>
+         <p>📌 INFORMAÇÕES DA CIRURGIA: </p>
+          <p>
+💰 Valor da cirurgia: R$ 48.000
+ </p>
+  <p>
+⏰ Prazo: 28 de julho (faltam poucos dias!) </p>
+ <p>   Agora é com você. </p>
+  <p>
+
+É você quem decide se Maria Júlia vai crescer escondendo o rostinho atrás de uma mãozinha… ou se ela vai ter a chance de sorrir, falar e viver como qualquer outra criança. </p>
+
+ <p>📖 "Tudo o que fizerem a algum dos meus pequeninos irmãos, a mim o fizeram." – Mateus 25:40 </p>
+
+CADA DIA QUE PASSA, MARIA JÚLIA FICA MAIS TEMPO SEM PODER SORRIR!
+        
+        </p>
+        <p>Esses custos são altos e, mesmo com todo o amor do mundo, a família precisa de ajuda urgente para garantir a Maju uma vida com mais dignidade, conforto e qualidade de vida.</p>
+        <p>🙌 <strong>Maria Júlia não precisa de piedade. Ela precisa de um milagre.</strong><br>
+E talvez o milagre seja você.</p>
+        <p>
+        </p>
+        <p>🙏  <strong>UM SINAL DE ESPERANÇA</strong></p>
+        <p>Naquela noite, ajoelhada no chão frio, ela pediu um sinal a Deus. Fechou os olhos e viu Maria Júlia correndo, com os lábios perfeitos, sorrindo sem medo, segurando a mão de uma senhora vestida de branco.
+        </p>
+        <br>
+        <p>💌 <strong>Testemunhos de Quem Conhece Maju</strong></p>
+        <p><em>"Maju é a menina mais forte que eu conheço. Ela me inspira todos os dias a valorizar a vida. Sei que, com um pouco de ajuda, ela pode continuar sendo esse exemplo pra muita gente."</em><br>
+        — Lucas, amigo da familia </p>
+        
+        <br>
+        <p>📢 <strong>Um Chamado ao Coração de Quem Se Importa</strong><br>
+        Maju já deu tudo de si à vida. Agora, é hora de a vida dar algo de volta.<br>
+        ela merece viver com conforto, com dignidade, com cuidado.</p>
+        <p>Se você já perdeu alguém que amava, sabe como é sentir que poderia ter feito mais.<br>
+        Não deixe esse sentimento chegar até você.</p>
+        <p>Agora é a hora. Hoje é o dia. <strong>Você pode ser a diferença.</strong></p>
+      </div>
+      <a href="#button-section" class="btn-anchor">
+        <button class="post-button3">DOAR AGORA</button>
+      </a>
+      <p><strong>Você receberá:</strong></p>
+      <p><strong>● Atualizações semanais</strong> da nossa jornada</p>
+      <p><strong>● Vídeo do novo lar sendo construído</strong></p>
+      <p><strong>● Seu nome na nossa lista de anjos</strong> (se desejar)</p>
+      <p>
+        <strong>Compartilhe nossa história</strong>. Cada compartilhamento é uma
+        <strong>nova chance</strong> de devolver dignidade à minha família.
+      </p>
+      <p><strong>Que Deus abençoe você e a sua família</strong>.</p>
+
+      <div id="button-section">
+        <div class="progress-content">
+          <div class="progress-text">
+            <h4>Arrecadado</h4>
+            <div class="progress-values">
+              <p>R$ 2.450,41</p>
+              <p>R$ 38.000,00</p>
+            </div>
+          </div>
+          <div class="progress-container">
+            <div class="progress-bar" style="width: 14%">
+              <strong>4%</strong>
+            </div>
+          </div>
+        </div>
+        <h4 style="text-align: center;">Clique no valor <br> que deseja doar</h4>
+      
+        <p class="donation-multiplier"><strong>✨ DOAÇÃO DUPLICADA! ✨</strong>
+          Doações a partir de R$50 serão multiplicadas por 2 pelos nossos patrocinadores e grupo de empresários que apoiam nossa campanha! Sua ajuda vale o dobro até 28/07. Não perca essa oportunidade de maximizar seu impacto na vida da Maju!</p>
+      </div>
+        </div>
+        <div class="buttons-section">
+          <div class="buttons-section1">
+            <a href="#">
+              <button class="post-button2">R$ 30</button>
+            </a>
+            <a href="#">
+              <button class="post-button2" style="border: 2px solid #ffcc00; box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);">R$ 50</button>
+            </a>
+            <a href="#">
+              <button class="post-button2">R$ 80</button>
+            </a>
+            <a href="#">
+              <button class="post-button2">R$ 150</button>
+            </a>
+            <a href="#">
+              <button class="post-button2">R$ 250</button>
+            </a>
+            <a href="#">
+              <button class="post-button2">R$ 350</button>
+            </a>
+            <a href="#">
+              <button class="post-button2">R$ 450</button>
+            </a>
+            <a href="#">
+              <button class="post-button2">R$ 600</button>
+            </a>
+            <a href="#">
+              <button class="post-button2">R$ 900</button>
+            </a>
+          </div>
+          <div class="buttons-section1">
+            <a href="#">
+              <button class="post-button2">R$ 40</button>
+            </a>
+            <a href="#">
+              <button class="post-button2">R$ 70</button>
+            </a>
+            <a href="#">
+              <button class="post-button2">R$ 100</button>
+            </a>
+            <a href="#">
+              <button class="post-button2">R$ 200</button>
+            </a>
+            <a href="#">
+              <button class="post-button2">R$ 300</button>
+            </a>
+            <a href="#">
+              <button class="post-button2">R$ 400</button>
+            </a>
+            <a href="#">
+              <button class="post-button2">R$ 500</button>
+            </a>
+            <a href="#">
+              <button class="post-button2">R$ 700</button>
+            </a>
+            <a href="#">
+              <button class="post-button2">R$ 1000</button>
+            </a>
+          </div>
+        </div>
+        <div class="sc-jXbUNg gNPJrz">
+          <div class="sc-jXbUNg dHwLb">
+            <div class="sc-jXbUNg jbBvcf"></div>
+            <div class="sc-jXbUNg dTrGCo sc-gRtvSG fpURXW"></div>
+          </div>
+        </div>
+        <div class="button-pix">
+          <div class="texto" id="1">
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section logo-section">
+          <a>
+            <img src="images/ajudelogo.png" />
+          </a>
+        </div>
+        <div class="footer-bottom">
+          <p>2025 - Todos direitos reservados</p>
+        </div>
+      </div>
+    </footer>
+
+      <script data-cfasync="false" src="js/email-decode.min.js"></script>
+      <script src="js/script.js"></script>
+      <script src="js/pix.js"></script>
+      <script src="js/toast.js"></script>
+      <script>
+        function copyEmail() {
+          const emailText = document.getElementById('donation-email').textContent;
+          navigator.clipboard.writeText(emailText)
+            .then(() => {
+              showToast('Email copiado com sucesso!', 'success');
+            })
+            .catch(err => {
+              console.error('Erro ao copiar email: ', err);
+              showToast('Erro ao copiar email', 'error');
+            });
+        }
+
+        function showToast(message, type) {
+          const toast = document.createElement('div');
+          toast.className = 'toast ' + type;
+          toast.innerHTML = `
+    <div class="toast-content">
+      <span>${message}</span>
+    </div>
+  `;
+          document.body.appendChild(toast);
+          // Mostra o toast
+          setTimeout(() => {
+            toast.classList.add('show');
+          }, 100);
+          // Remove o toast após 3 segundos
+          setTimeout(() => {
+            toast.classList.remove('show');
+            setTimeout(() => {
+              document.body.removeChild(toast);
+            }, 300);
+          }, 3000);
+        }
+      </script>
